@@ -9,9 +9,9 @@ order_payments_df = pd.read_csv("order_payments.csv")
 rfm_df = pd.read_csv("rfm_df.csv")
 rfm_merged_df = pd.read_csv("rfm_merged_df.csv")
 
-
 st.title("Analisis dan Visualisasi Data E-Commerce :star:")
 
+# Review Score dan Review Comment
 st.subheader("The Number of Customer Review")
  
 col1, col2 = st.columns(2)
@@ -69,7 +69,10 @@ ax.set_ylabel('Review Comment')
 ax.set_title('Correlation Between Score and Comment Given by Customers')
 st.pyplot(fig)
 
-# Eksplorasi dan Visualisasi Pertanyaan Bisnis 2
+
+
+
+# Tipe Pembayaran
 st.subheader("Order Payments")
 payment_counts = order_payments_df.groupby(by="payment_type").order_id.nunique().sort_values(ascending=False)
 
@@ -78,6 +81,9 @@ colors = ['olive', 'green', 'tomato', 'orange', 'maroon']
 ax.pie(payment_counts, labels=payment_counts.index, autopct='%1.1f%%', startangle=140, colors=colors)
 ax.set_title('Distribution of Payment Type')
 st.pyplot(fig)
+
+
+
 
 # Total order setiap bulan
 st.subheader("Order Trends Every Month")
@@ -98,15 +104,8 @@ ax.tick_params(axis='x', rotation=45)
 ax.grid(True)
 plt.tight_layout()
 st.pyplot(fig)
-# plt.figure(figsize=(6,5))
-# monthly_orders.plot(kind='line', marker='o', linestyle='-', color='b')
-# plt.title("Jumlah Total Order per Bulan")
-# plt.xlabel("Bulan")
-# plt.ylabel("Jumlah Total Order")
-# plt.xticks(rotation=45)
-# plt.grid(True)
-# plt.tight_layout()
-# plt.show()
+
+
 
 # Analisis RFM
 st.subheader("Customer Segmentation Based on RFM Analysis")
