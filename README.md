@@ -1,4 +1,4 @@
-# Dicoding Collection Dashboard ✨
+# How to Run App ✨
 
 ## Setup environment
 ```
