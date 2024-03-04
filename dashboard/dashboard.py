@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
-order_reviews_df = pd.read_csv("order_reviews.csv")
-order_payments_df = pd.read_csv("order_payments.csv")
-rfm_df = pd.read_csv("rfm_df.csv")
-rfm_merged_df = pd.read_csv("rfm_merged_df.csv")
+order_reviews_df = pd.read_csv("dashboard/order_reviews.csv")
+order_payments_df = pd.read_csv("dashboard/order_payments.csv")
+rfm_df = pd.read_csv("dashboard/rfm_df.csv")
+rfm_merged_df = pd.read_csv("dashboard/rfm_merged_df.csv")
 
 st.title("Analisis dan Visualisasi Data E-Commerce :star:")
 
