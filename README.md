@@ -10,7 +10,7 @@ pip install seaborn
 pip install streamlit
 ```
 
-## Run steamlit app
+## Run streamlit app
 ```
 streamlit run dashboard.py
 ```
