@@ -1,4 +1,4 @@
-# How to Run App ✨
+# How to Run the App ✨
 
 ## Setup environment
 ```
